@@ -71,3 +71,23 @@ class ClassViewSet(viewsets.ModelViewSet):
 class SubjectViewSet(viewsets.ModelViewSet):
     queryset = Subject.objects.all()
     serializer_class = SubjectSerializer
+
+
+class PrincipalViewSet(viewsets.ModelViewSet):
+    queryset = Principal.objects.all()
+    serializer_class = PrincipalSerializer
+
+
+class TeacherViewSet(viewsets.ModelViewSet):
+    queryset = Teacher.objects.all()
+    serializer_class = TeacherSerializer
+
+
+class StudentViewSet(viewsets.ModelViewSet):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+
+class GuardianViewSet(viewsets.ModelViewSet):
+    queryset = Guardian.objects.all()
+    serializer_class = GuardianSerializer

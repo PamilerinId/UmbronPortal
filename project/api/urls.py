@@ -14,6 +14,12 @@ router.register(r'term', views.TermViewSet)
 router.register(r'schools', views.SchoolViewSet)
 router.register(r'classes', views.ClassViewSet)
 router.register(r'subjects', views.SubjectViewSet)
+router.register(r'principals', views.PrincipalViewSet)
+router.register(r'teachers', views.TeacherViewSet)
+router.register(r'guardians', views.GuardianViewSet)
+router.register(r'students', views.StudentViewSet)
+
+
 
 urlpatterns = [
     url(r'^', include(router.urls)),

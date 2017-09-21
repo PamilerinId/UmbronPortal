@@ -8,8 +8,14 @@ from django.contrib.auth.models import User
 
 
 # Register your models here.
-admin.site.register(CustomUser)
-admin.site.register(Class)
-admin.site.register(School)
 admin.site.register(Session)
+admin.site.register(School)
+admin.site.register(Class)
 admin.site.register(Subject)
+
+admin.site.register(CustomUser)
+admin.site.register(Principal)
+admin.site.register(Teacher)
+admin.site.register(Student)
+admin.site.register(Guardian)
+

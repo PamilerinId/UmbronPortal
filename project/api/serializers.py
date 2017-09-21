@@ -88,3 +88,36 @@ class SubjectSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Subject
         fields = ('url', 'name', 'ca_score', 'exam_score')
+
+
+class PrincipalSerializer(serializers.HyperlinkedModelSerializer):
+    user = serializers.pipCustomUserSerializer
+
+    class Meta:
+        model = Principal
+        fields = ('url', 'user', 'school_in_charge')
+
+
+class TeacherSerializer(serializers.HyperlinkedModelSerializer):
+    user = CustomUserSerializer
+
+    class Meta:
+        model = Teacher
+        fields = ('url', 'user', 'school_employed', 'subject_s', 'is_classteacher', 'class_in_charge')
+
+
+class StudentSerializer(serializers.HyperlinkedModelSerializer):
+    user = CustomUserSerializer
+
+    class Meta:
+        model = Student
+        fields = ('url', 'user', 'school_attending', 'classroom', 'guardian')
+
+
+class GuardianSerializer(serializers.HyperlinkedModelSerializer):
+    user = CustomUserSerializer
+
+    class Meta:
+        model = Guardian
+        fields = ('url', 'user', 'ward')
+

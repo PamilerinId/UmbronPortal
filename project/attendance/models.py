@@ -8,7 +8,7 @@ from project.api.models import *
 
 
 class Attendance(models.Model):
-    student = models.ForeignKey(CustomUser)
+    student = models.ForeignKey(Student)
     date_taken = models.DateTimeField(auto_now=True)
     is_present = models.BooleanField(default=False)
-    class_teacher = models.ForeignKey(CustomUser)#change profiles
+    class_teacher = models.ForeignKey(Teacher)#change profiles
